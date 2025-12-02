@@ -1,0 +1,32 @@
+{
+  "project_info": {
+    "project_number": "971217936194",
+    "firebase_url": "https://ddaxitd-asg1-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "ddaxitd-asg1",
+    "storage_bucket": "ddaxitd-asg1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971217936194:ios:299a51504fef25fef332db",
+        "android_client_info": {
+          "package_name": "DDAxITD-ASG1"
+        }
+      },
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV5FzJm1DR0UNAqCqqf77BgEc68lTIk_Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 0
+        },
+        "appinvite_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
