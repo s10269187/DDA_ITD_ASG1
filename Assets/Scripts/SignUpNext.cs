@@ -1,18 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SignUpNext : MonoBehaviour
+public class SignupButton : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void GoToNextScene()
     {
         SceneManager.LoadScene("Playground");
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
