@@ -37,7 +37,7 @@ public class PickUp : MonoBehaviour
     void Update()
     {
         // Press R to pick up or drop
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetMouseButtonDown(0))
         {
             if (heldObj == null)
             {
