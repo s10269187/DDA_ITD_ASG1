@@ -6,7 +6,7 @@ public class Respawn : MonoBehaviour
     public float respawnTime = 10f;
     public float delayTime = 10f;
     public int counter = 0;
-    public int maxCunter = 2;
+    public int maxCounter = 2;
 
     void Start() 
     {   
@@ -17,7 +17,7 @@ public class Respawn : MonoBehaviour
 
     public void CollectItem()
     {
-        if(counter < maxCunter)
+        if(counter < maxCounter)
         {        
             // Hide or destroy collected object
             gameObject.SetActive(false);
