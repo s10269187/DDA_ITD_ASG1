@@ -1,48 +1,71 @@
-// using System.Collections.Generic;
-// using UnityEngine;
-// using System.Linq;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
-// public class InventoryManager : MonoBehaviour {
-//     public static InventoryManager I { get; private set; }
+public class InventoryManager : MonoBehaviour
+{
 
-//     // store counts (or true/false if you only want single collect)
-//     private Dictionary<string, int> items = new Dictionary<string, int>();
+    public static InventoryManager Instance;
 
-//     void Awake() {
-//         if (I == null) { I = this; DontDestroyOnLoad(gameObject); }
-//         else Destroy(gameObject);
-//     }
+    [Header("UI Slots")]
+    public Image[] slots;  // the white boxes in inventory UI
 
-//     public void AddIngredient(IngredientSO ing, int amount = 1) {
-//         if (ing == null) return;
-//         if (!items.ContainsKey(ing.ingredientID)) items[ing.ingredientID] = 0;
-//         items[ing.ingredientID] += amount;
-//         // notify UI
-//         CraftingUIController.I?.OnInventoryChanged();
-//     }
+    [Header("UI Counter")]
+    public TextMeshProUGUI ingredientCounterText;
 
-//     public bool HasIngredient(IngredientSO ing, int amount = 1) {
-//         if (ing == null) return false;
-//         return items.ContainsKey(ing.ingredientID) && items[ing.ingredientID] >= amount;
-//     }
+    [Header("Ingredient Count")]
+    public int ingredientsCollected = 0;
+    public int totalIngredients = 8;  // Change if needed
 
-//     public bool HasAll(RecipeSO recipe) {
-//         if (recipe == null) return false;
-//         return recipe.requiredIngredients.All(ing => HasIngredient(ing));
-//     }
+    private void Awake()
+    {
+        
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
-//     public void ConsumeForRecipe(RecipeSO recipe) {
-//         if (recipe == null) return;
-//         foreach (var ing in recipe.requiredIngredients) {
-//             if (items.ContainsKey(ing.ingredientID)) {
-//                 items[ing.ingredientID] = Mathf.Max(0, items[ing.ingredientID] - 1);
-//             }
-//         }
-//         CraftingUIController.I?.OnInventoryChanged();
-//     }
+    public void AddItem(string itemName, Sprite sprite)
+    {
+        // Fill next empty slot
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i].sprite == null)
+            {
+                slots[i].sprite = sprite;
+                slots[i].color = Color.white;
+                break;
+            }
+        }
 
-//     // expose for UI debug / listing
-//     public Dictionary<string,int> GetSnapshot() {
-//         return new Dictionary<string,int>(items);
-//     }
-// }
+        // Update total count
+        ingredientsCollected++;
+        UpdateCounterUI();
+
+        Debug.Log($"Added {itemName} to inventory.");
+    }
+
+    private void UpdateCounterUI()
+    {
+        ingredientCounterText.text = $"Ingredients: {ingredientsCollected}/{totalIngredients}";
+    }
+
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}

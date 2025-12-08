@@ -919,6 +919,7 @@ GameObject:
   - component: {fileID: 7633770504975829183}
   - component: {fileID: 3527070347972806777}
   - component: {fileID: 8143114580189654337}
+  - component: {fileID: 3619810912013257550}
   m_Layer: 0
   m_Name: Egg
   m_TagString: Untagged
@@ -1034,6 +1035,21 @@ MonoBehaviour:
   delayTime: 2
   counter: 0
   maxCounter: 2
+  ingredientInfo: {fileID: 0}
+--- !u!114 &3619810912013257550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3319328844194993210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ded46762e338141a667d602609a2b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientName: egg
+  ingredientSprite: {fileID: 21300000, guid: fd1bb6ec14a187b449646b9efe218eb4, type: 3}
 --- !u!1 &3475735057603037936
 GameObject:
   m_ObjectHideFlags: 0
@@ -2701,6 +2717,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3896224150070664347, guid: c3cf416149703a64eb9a6a4dd8cd0609, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4843274926185649467}
+    - targetCorrespondingSourceObject: {fileID: 3896224150070664347, guid: c3cf416149703a64eb9a6a4dd8cd0609, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1505140793824606218}
   m_SourcePrefab: {fileID: 100100000, guid: c3cf416149703a64eb9a6a4dd8cd0609, type: 3}
 --- !u!1 &3184574177262869623 stripped
 GameObject:
@@ -2724,6 +2743,21 @@ MonoBehaviour:
   delayTime: 10
   counter: 0
   maxCounter: 1
+  ingredientInfo: {fileID: 0}
+--- !u!114 &1505140793824606218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3184574177262869623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ded46762e338141a667d602609a2b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientName: water
+  ingredientSprite: {fileID: 21300000, guid: 58ffb645876744f449b3994a8277f92e, type: 3}
 --- !u!4 &7936791441117423382 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8360633280588556282, guid: c3cf416149703a64eb9a6a4dd8cd0609, type: 3}
@@ -2808,6 +2842,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7356878917243839396, guid: 75fca38d2eaa0e9499bd61059f1e630f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3686347036061573182}
+    - targetCorrespondingSourceObject: {fileID: 7356878917243839396, guid: 75fca38d2eaa0e9499bd61059f1e630f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5039722681498712719}
   m_SourcePrefab: {fileID: 100100000, guid: 75fca38d2eaa0e9499bd61059f1e630f, type: 3}
 --- !u!4 &186858482106915183 stripped
 Transform:
@@ -2836,6 +2873,21 @@ MonoBehaviour:
   delayTime: 12
   counter: 0
   maxCounter: 1
+  ingredientInfo: {fileID: 0}
+--- !u!114 &5039722681498712719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3627354749588913961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ded46762e338141a667d602609a2b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientName: hawthorn
+  ingredientSprite: {fileID: 21300000, guid: c1cc4283a1c20a24d9e9355364faa3ef, type: 3}
 --- !u!1001 &6251235979153333107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2910,6 +2962,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8002785158822234330, guid: a117d991e7db5ce43b47538525a1df32, type: 3}
       insertIndex: -1
       addedObject: {fileID: 410326084121456288}
+    - targetCorrespondingSourceObject: {fileID: 8002785158822234330, guid: a117d991e7db5ce43b47538525a1df32, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6712468487052377695}
   m_SourcePrefab: {fileID: 100100000, guid: a117d991e7db5ce43b47538525a1df32, type: 3}
 --- !u!4 &548921330275035569 stripped
 Transform:
@@ -2938,6 +2993,21 @@ MonoBehaviour:
   delayTime: 7
   counter: 0
   maxCounter: 2
+  ingredientInfo: {fileID: 0}
+--- !u!114 &6712468487052377695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4165619318518535081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ded46762e338141a667d602609a2b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientName: sugar
+  ingredientSprite: {fileID: 21300000, guid: a030238a69b355a4bb37d5b57db6d778, type: 3}
 --- !u!1001 &7611114596014414162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3012,6 +3082,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7900902058152501302, guid: a3b5851b28eae9d4f92047c3ba298726, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9157469666821493476}
+    - targetCorrespondingSourceObject: {fileID: 7900902058152501302, guid: a3b5851b28eae9d4f92047c3ba298726, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2526891889845950576}
   m_SourcePrefab: {fileID: 100100000, guid: a3b5851b28eae9d4f92047c3ba298726, type: 3}
 --- !u!1 &289841066019912036 stripped
 GameObject:
@@ -3035,6 +3108,21 @@ MonoBehaviour:
   delayTime: 8
   counter: 0
   maxCounter: 2
+  ingredientInfo: {fileID: 0}
+--- !u!114 &2526891889845950576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289841066019912036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ded46762e338141a667d602609a2b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientName: flour
+  ingredientSprite: {fileID: 21300000, guid: 67ed2c803093ef94cb009103a14df755, type: 3}
 --- !u!4 &5779065355036247630 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4148731373408558876, guid: a3b5851b28eae9d4f92047c3ba298726, type: 3}

@@ -7,9 +7,13 @@ public class Respawn : MonoBehaviour
     public float delayTime = 10f;
     public int counter = 0;
     public int maxCounter = 2;
+    public Ingredient ingredientInfo;
 
     void Start() 
-    {   
+    {
+        if (ingredientInfo == null)
+            ingredientInfo = GetComponent<Ingredient>();   
+            
         gameObject.SetActive(false);              
         Invoke(nameof(RespawnItem), delayTime);
         Debug.Log("Spawn timer started");
@@ -18,7 +22,9 @@ public class Respawn : MonoBehaviour
     public void CollectItem()
     {
         if(counter < maxCounter)
-        {        
+        {
+            // Update Inventory
+            InventoryManager.Instance.AddItem(ingredientInfo.ingredientName, ingredientInfo.ingredientSprite);        
             // Hide or destroy collected object
             gameObject.SetActive(false);
 
