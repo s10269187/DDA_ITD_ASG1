@@ -1034,7 +1034,7 @@ MonoBehaviour:
   respawnTime: 10
   delayTime: 2
   counter: 0
-  maxCounter: 2
+  maxCounter: 1
   ingredientInfo: {fileID: 0}
 --- !u!114 &3619810912013257550
 MonoBehaviour:
@@ -2992,7 +2992,7 @@ MonoBehaviour:
   respawnTime: 6
   delayTime: 7
   counter: 0
-  maxCounter: 2
+  maxCounter: 3
   ingredientInfo: {fileID: 0}
 --- !u!114 &6712468487052377695
 MonoBehaviour:
