@@ -42,7 +42,7 @@ public class InventoryManager : MonoBehaviour
         slots[slotIndex].sprite = sprite;
 
         ingredientsCollected++;
-        slotIndex++;
+        UpdateCounterUI();
 
         Debug.Log($"Added item to slot {slotIndex}");
     }
