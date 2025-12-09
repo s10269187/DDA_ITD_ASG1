@@ -19,7 +19,7 @@ public class InventoryManager : MonoBehaviour
 
     private void Awake()
     {
-        
+
         if (Instance == null)
         {
             Instance = this;
@@ -31,24 +31,20 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public void AddItem(string itemName, Sprite sprite)
+    public void AddItemToSlot(int slotIndex, Sprite sprite)
     {
-        // Fill next empty slot
-        for (int i = 0; i < slots.Length; i++)
+        if (slotIndex < 0 || slotIndex >= slots.Length)
         {
-            if (slots[i].sprite == null)
-            {
-                slots[i].sprite = sprite;
-                slots[i].color = Color.white;
-                break;
-            }
+            Debug.LogError("Invalid slot index!");
+            return;
         }
 
-        // Update total count
-        ingredientsCollected++;
-        UpdateCounterUI();
+        slots[slotIndex].sprite = sprite;
 
-        Debug.Log($"Added {itemName} to inventory.");
+        ingredientsCollected++;
+        slotIndex++;
+
+        Debug.Log($"Added item to slot {slotIndex}");
     }
 
     private void UpdateCounterUI()
@@ -60,12 +56,12 @@ public class InventoryManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

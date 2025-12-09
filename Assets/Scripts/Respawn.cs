@@ -2,31 +2,28 @@ using UnityEngine;
 
 public class Respawn : MonoBehaviour
 {
+    public Sprite ingredientSprite; 
     public GameObject itemPrefab;     // prefab to respawn
     public float respawnTime = 10f;
     public float delayTime = 10f;
     public int counter = 0;
     public int maxCounter = 2;
-    public Ingredient ingredientInfo;
+    public int slotIndex;  // tell inventory where to place this sprite
+
 
     void Start() 
     {
-        if (ingredientInfo == null)
-            ingredientInfo = GetComponent<Ingredient>();   
-            
         gameObject.SetActive(false);              
         Invoke(nameof(RespawnItem), delayTime);
         Debug.Log("Spawn timer started");
     }
-
     public void CollectItem()
     {
         if(counter < maxCounter)
-        {
-            // Update Inventory
-            InventoryManager.Instance.AddItem(ingredientInfo.ingredientName, ingredientInfo.ingredientSprite);        
+        {   
             // Hide or destroy collected object
             gameObject.SetActive(false);
+            InventoryManager.Instance.AddItemToSlot(slotIndex, ingredientSprite);
 
             // Start respawn timer
             Invoke(nameof(RespawnItem), respawnTime);

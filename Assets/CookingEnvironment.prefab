@@ -1030,12 +1030,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 949d21a2e5328ce4e8baf86d4f317dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ingredientSprite: {fileID: 21300000, guid: fd1bb6ec14a187b449646b9efe218eb4, type: 3}
   itemPrefab: {fileID: 3319328844194993210}
   respawnTime: 10
   delayTime: 2
   counter: 0
   maxCounter: 1
-  ingredientInfo: {fileID: 0}
+  slotIndex: 0
 --- !u!114 &3619810912013257550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1048,7 +1049,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ded46762e338141a667d602609a2b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredientName: egg
   ingredientSprite: {fileID: 21300000, guid: fd1bb6ec14a187b449646b9efe218eb4, type: 3}
 --- !u!1 &3475735057603037936
 GameObject:
@@ -2738,12 +2738,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 949d21a2e5328ce4e8baf86d4f317dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ingredientSprite: {fileID: 21300000, guid: 58ffb645876744f449b3994a8277f92e, type: 3}
   itemPrefab: {fileID: 3184574177262869623}
   respawnTime: 4
   delayTime: 10
   counter: 0
   maxCounter: 1
-  ingredientInfo: {fileID: 0}
+  slotIndex: 0
 --- !u!114 &1505140793824606218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2756,7 +2757,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ded46762e338141a667d602609a2b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredientName: water
   ingredientSprite: {fileID: 21300000, guid: 58ffb645876744f449b3994a8277f92e, type: 3}
 --- !u!4 &7936791441117423382 stripped
 Transform:
@@ -2868,12 +2868,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 949d21a2e5328ce4e8baf86d4f317dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ingredientSprite: {fileID: 21300000, guid: c1cc4283a1c20a24d9e9355364faa3ef, type: 3}
   itemPrefab: {fileID: 3627354749588913961}
   respawnTime: 10
   delayTime: 12
   counter: 0
   maxCounter: 1
-  ingredientInfo: {fileID: 0}
+  slotIndex: 0
 --- !u!114 &5039722681498712719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2886,7 +2887,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ded46762e338141a667d602609a2b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredientName: hawthorn
   ingredientSprite: {fileID: 21300000, guid: c1cc4283a1c20a24d9e9355364faa3ef, type: 3}
 --- !u!1001 &6251235979153333107
 PrefabInstance:
@@ -2988,12 +2988,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 949d21a2e5328ce4e8baf86d4f317dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ingredientSprite: {fileID: 21300000, guid: a030238a69b355a4bb37d5b57db6d778, type: 3}
   itemPrefab: {fileID: 4165619318518535081}
   respawnTime: 6
   delayTime: 7
   counter: 0
   maxCounter: 3
-  ingredientInfo: {fileID: 0}
+  slotIndex: 0
 --- !u!114 &6712468487052377695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3006,7 +3007,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ded46762e338141a667d602609a2b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredientName: sugar
   ingredientSprite: {fileID: 21300000, guid: a030238a69b355a4bb37d5b57db6d778, type: 3}
 --- !u!1001 &7611114596014414162
 PrefabInstance:
@@ -3103,12 +3103,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 949d21a2e5328ce4e8baf86d4f317dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ingredientSprite: {fileID: 21300000, guid: 67ed2c803093ef94cb009103a14df755, type: 3}
   itemPrefab: {fileID: 289841066019912036}
   respawnTime: 5
   delayTime: 8
   counter: 0
   maxCounter: 2
-  ingredientInfo: {fileID: 0}
+  slotIndex: 0
 --- !u!114 &2526891889845950576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3121,7 +3122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ded46762e338141a667d602609a2b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredientName: flour
   ingredientSprite: {fileID: 21300000, guid: 67ed2c803093ef94cb009103a14df755, type: 3}
 --- !u!4 &5779065355036247630 stripped
 Transform:

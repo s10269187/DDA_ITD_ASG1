@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Ingredient : MonoBehaviour
 {
-    public string ingredientName;   
     public Sprite ingredientSprite;     // sprite to show in UI inventory
 
 
