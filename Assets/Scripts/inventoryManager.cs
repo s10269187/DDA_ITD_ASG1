@@ -4,22 +4,21 @@ using TMPro;
 
 public class InventoryManager : MonoBehaviour
 {
-
     public static InventoryManager Instance;
 
     [Header("UI Slots")]
-    public Image[] slots;  // the white boxes in inventory UI
+    public Image[] slots;             // Slot images
+    public TextMeshProUGUI[] counts;  // TMP counters next to each slot
 
     [Header("UI Counter")]
     public TextMeshProUGUI ingredientCounterText;
 
     [Header("Ingredient Count")]
     public int ingredientsCollected = 0;
-    public int totalIngredients = 8;  // Change if needed
+    public int totalIngredients = 8;
 
     private void Awake()
     {
-
         if (Instance == null)
         {
             Instance = this;
@@ -31,37 +30,47 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public void AddItemToSlot(int slotIndex, Sprite sprite)
+    public void AddItemToSlot(Sprite sprite)
     {
-        if (slotIndex < 0 || slotIndex >= slots.Length)
+        // 1️⃣ First check if this ingredient already exists in inventory
+        for (int i = 0; i < slots.Length; i++)
         {
-            Debug.LogError("Invalid slot index!");
-            return;
+            if (slots[i].sprite == sprite)
+            {
+                // increase count
+                int currentAmount = int.Parse(counts[i].text.Replace("x", ""));
+                currentAmount++;
+                counts[i].text = "x" + currentAmount;
+
+                ingredientsCollected++;
+                UpdateCounterUI();
+
+                Debug.Log($"Updated existing item count in slot {i}");
+                return;
+            }
         }
 
-        slots[slotIndex].sprite = sprite;
+        // 2️⃣ If it doesn't exist, find an empty slot
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i].sprite == null)
+            {
+                slots[i].sprite = sprite;
+                counts[i].text = "x1";
 
-        ingredientsCollected++;
-        UpdateCounterUI();
+                ingredientsCollected++;
+                UpdateCounterUI();
 
-        Debug.Log($"Added item to slot {slotIndex}");
+                Debug.Log($"Added NEW item to slot {i}");
+                return;
+            }
+        }
+
+        Debug.LogWarning("No empty inventory slots available!");
     }
 
     private void UpdateCounterUI()
     {
         ingredientCounterText.text = $"Ingredients: {ingredientsCollected}/{totalIngredients}";
-    }
-
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
