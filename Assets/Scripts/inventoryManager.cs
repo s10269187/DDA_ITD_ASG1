@@ -40,6 +40,17 @@ public class InventoryManager : MonoBehaviour
 
     private DatabaseReference db;
 
+    public Transform arCamera;       
+    public GameObject biscuitPrefab;
+    public GameObject bangkitPrefab;
+    public GameObject hawFlakesPrefab;
+
+    void SpawnSnack(GameObject prefab)
+    {
+        Vector3 spawnPos = arCamera.position + arCamera.forward * 0.5f; // 0.5m in front
+        Instantiate(prefab, spawnPos, Quaternion.LookRotation(arCamera.forward));
+    }
+
     private void Awake()
     {
         if (Instance == null)
@@ -189,6 +200,7 @@ public class InventoryManager : MonoBehaviour
         DeductIngredient(flourSprite, 1);
         DeductIngredient(sugarSprite, 1);
         AddItemToSlot(biscuitSprite, false);
+        SpawnSnack(biscuitPrefab);
 
         snacksCrafted++;
         UpdateCounterUI();
@@ -209,6 +221,7 @@ public class InventoryManager : MonoBehaviour
         DeductIngredient(eggSprite, 1);
         DeductIngredient(sugarSprite, 1);
         AddItemToSlot(bangkitSprite, false);
+        SpawnSnack(bangkitPrefab);
 
         snacksCrafted++;
         UpdateCounterUI();
@@ -229,6 +242,7 @@ public class InventoryManager : MonoBehaviour
         DeductIngredient(hawthornSprite, 1);
         DeductIngredient(sugarSprite, 1);
         AddItemToSlot(hawFlakesSprite, false);
+        SpawnSnack(hawFlakesPrefab);
 
         snacksCrafted++;
         UpdateCounterUI();
