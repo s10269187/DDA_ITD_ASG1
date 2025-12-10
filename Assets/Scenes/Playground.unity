@@ -341,7 +341,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -55, y: 745}
+  m_AnchoredPosition: {x: -55, y: 780}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &91645002
@@ -373,8 +373,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4292272634
+  m_fontColor: {r: 0.9811321, g: 0.88297015, b: 0.83766466, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2709,8 +2709,11 @@ MonoBehaviour:
   - {fileID: 273814072}
   - {fileID: 846073360}
   ingredientCounterText: {fileID: 176269610}
+  snacksCraftedText: {fileID: 1327547737}
   ingredientsCollected: 0
   totalIngredients: 8
+  snacksCrafted: 0
+  totalSnacks: 3
   flourSprite: {fileID: 21300000, guid: 67ed2c803093ef94cb009103a14df755, type: 3}
   sugarSprite: {fileID: 21300000, guid: a030238a69b355a4bb37d5b57db6d778, type: 3}
   eggSprite: {fileID: 21300000, guid: fd1bb6ec14a187b449646b9efe218eb4, type: 3}
@@ -10454,7 +10457,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 105, y: 745.00006}
+  m_AnchoredPosition: {x: 105, y: 780.0001}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1950157936
@@ -10499,8 +10502,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4292272634
+  m_fontColor: {r: 0.9811321, g: 0.88297015, b: 0.83766466, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

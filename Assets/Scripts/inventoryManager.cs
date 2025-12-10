@@ -13,10 +13,15 @@ public class InventoryManager : MonoBehaviour
 
     [Header("UI Counter")]
     public TextMeshProUGUI ingredientCounterText;
+    public TextMeshProUGUI snacksCraftedText;
 
     [Header("Ingredient Count")]
     public int ingredientsCollected = 0;
     public int totalIngredients = 8;
+
+    [Header("Snacks Crafted")]
+    public int snacksCrafted = 0;
+    public int totalSnacks = 3;
 
     [Header("Ingredient Sprites")]
     public Sprite flourSprite;
@@ -93,6 +98,7 @@ public class InventoryManager : MonoBehaviour
     private void UpdateCounterUI()
     {
         ingredientCounterText.text = $"Ingredients: {ingredientsCollected}/{totalIngredients}";
+        snacksCraftedText.text = $"Snacks Crafted: {snacksCrafted}/{totalSnacks}";
     }
 
     // ------------------- HELPER CHECK -------------------
@@ -176,14 +182,18 @@ public class InventoryManager : MonoBehaviour
     {
         if (!CanCraftBiscuit())
         {
-            Debug.Log("❌ Not enough ingredients for Biscuit Gem");
+            Debug.Log(" Not enough ingredients for Biscuit Gem");
             return;
         }
 
         DeductIngredient(flourSprite, 1);
         DeductIngredient(sugarSprite, 1);
         AddItemToSlot(biscuitSprite, false);
-        Debug.Log("🍪 Crafted Biscuit Gem!");
+
+        snacksCrafted++;
+        UpdateCounterUI();
+
+        Debug.Log(" Crafted Biscuit Gem!");
         CheckAllCrafted();
     }
 
@@ -191,7 +201,7 @@ public class InventoryManager : MonoBehaviour
     {
         if (!CanCraftBangkit())
         {
-            Debug.Log("❌ Not enough ingredients for Bangkit");
+            Debug.Log(" Not enough ingredients for Bangkit");
             return;
         }
 
@@ -199,7 +209,11 @@ public class InventoryManager : MonoBehaviour
         DeductIngredient(eggSprite, 1);
         DeductIngredient(sugarSprite, 1);
         AddItemToSlot(bangkitSprite, false);
-        Debug.Log("🍘 Crafted Bangkit!");
+
+        snacksCrafted++;
+        UpdateCounterUI();
+
+        Debug.Log(" Crafted Bangkit!");
         CheckAllCrafted();
     }
 
@@ -207,7 +221,7 @@ public class InventoryManager : MonoBehaviour
     {
         if (!CanCraftHawFlakes())
         {
-            Debug.Log("❌ Not enough ingredients for Haw Flakes");
+            Debug.Log(" Not enough ingredients for Haw Flakes");
             return;
         }
 
@@ -215,7 +229,11 @@ public class InventoryManager : MonoBehaviour
         DeductIngredient(hawthornSprite, 1);
         DeductIngredient(sugarSprite, 1);
         AddItemToSlot(hawFlakesSprite, false);
-        Debug.Log("🍬 Crafted Haw Flakes!");
+
+        snacksCrafted++;
+        UpdateCounterUI();
+
+        Debug.Log(" Crafted Haw Flakes!");
         CheckAllCrafted();
     }
 
@@ -241,7 +259,7 @@ public class InventoryManager : MonoBehaviour
             if (gameTimer != null)
                 gameTimer.StopTimer();
 
-            Debug.Log("⏱ All items crafted! Timer stopped.");
+            Debug.Log(" All items crafted! Timer stopped.");
 
             float elapsedTime = gameTimer != null ? gameTimer.GetElapsedTime() : 0f;
             var player = new Player();
