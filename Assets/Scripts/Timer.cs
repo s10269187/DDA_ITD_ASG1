@@ -1,6 +1,19 @@
+/// <summary>
+/// Timer.cs
+/// This script handles the lava obstacle in the final stage of our haunted house
+/// When player steps onto the lava, the player automatically dies and respawn
+/// at the spawn point set in Unity as an empty GameObject
+/// </summary>
+/// <author> Lee Jia Lu </author>
+/// <date> 09/12+/2025 </date>
+/// <StudentID> S10269187E </StudentID>
 using UnityEngine;
 using TMPro;
 
+
+/// <summary>
+/// Timer code in which is formatted nicely to minutes and seconds
+/// </summary>
 public class Timer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timerText;

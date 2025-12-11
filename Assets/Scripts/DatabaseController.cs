@@ -1,3 +1,12 @@
+/// <summary>
+/// DatabaseController.cs
+/// This script handles the lava obstacle in the final stage of our haunted house
+/// When player steps onto the lava, the player automatically dies and respawn
+/// at the spawn point set in Unity as an empty GameObject
+/// </summary>
+/// <author> Lee Jia Lu </author>
+/// <date> 09/12+/2025 </date>
+/// <StudentID> S10269187E </StudentID>
 using UnityEngine;
 using Firebase.Database;
 using System.Collections.Generic;
@@ -8,15 +17,27 @@ using System;
 
 public class DatabaseController : MonoBehaviour
 {
-
+    /// <summary>
+    /// Input field for the user's email
+    /// </summary>
     public TMP_InputField EmailInput;
+     /// <summary>
+    /// Input field for the user's password
+    /// </summary>
     public TMP_InputField PasswordInput;
 
+    /// <summary>
+    /// Signs the current Firebase user out.
+    /// </summary>
     public void SignOut()
     {
         FirebaseAuth.DefaultInstance.SignOut();
     }
 
+    /// <summary>
+    /// Creates a new user account using email and password
+    /// Logs an error if sign up requirement fails
+    /// </summary>
     public void SignUp()
     {
         var signupTask = FirebaseAuth.DefaultInstance.CreateUserWithEmailAndPasswordAsync(EmailInput.text, PasswordInput.text);
@@ -36,6 +57,10 @@ public class DatabaseController : MonoBehaviour
         });
     }
 
+    /// <summary>
+    /// Signs in an existing user using email and password
+    ///     /// Logs an error if login fails
+    /// </summary>
     public void SignIn()
     {
         var signInTask = FirebaseAuth.DefaultInstance.SignInWithEmailAndPasswordAsync(EmailInput.text, PasswordInput.text);
@@ -56,7 +81,10 @@ public class DatabaseController : MonoBehaviour
 
         Debug.Log("Hahahahaha");
     }
-
+    /// <summary>
+    /// Handles Firebase authentication state changes
+    /// This triggers whenever the user logs in or out
+    /// </summary>
     // Auth event handling example
     private void OnAuthStateChanged(object sender, EventArgs e)
     {
@@ -72,6 +100,11 @@ public class DatabaseController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Initialises Firebase event listeners and performs
+    /// example operations: writing, updating, deleting,
+    /// and retrieving data from Firebase Realtime Database
+    /// </summary>
     void Start()
     {
         // Auth event handling example
