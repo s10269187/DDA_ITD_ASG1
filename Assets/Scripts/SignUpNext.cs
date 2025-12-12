@@ -1,6 +1,6 @@
 /// <summary>
 /// SignUpNext.cs
-/// This script handles login page doing into the playground page upon signing up
+/// This script handles login page going into the playground page upon signing up
 /// When player finish signing up, they will be press the sign up button
 /// and they will be redirected to the next scene's page which is called Playground
 /// </summary>

@@ -5,7 +5,7 @@
 /// at the spawn point set in Unity as an empty GameObject
 /// </summary>
 /// <author> Lee Jia Lu </author>
-/// <date> 09/12+/2025 </date>
+/// <date> 09/12/2025 </date>
 /// <StudentID> S10269187E </StudentID>
 using UnityEngine;
 using Firebase.Database;
