@@ -63,6 +63,18 @@ public class Respawn : MonoBehaviour
     /// </summary>
     public void CollectItem()
     {
+        if (InventoryManager.Instance == null)
+        {
+            Debug.LogError("InventoryManager INSTANCE IS NULL!");
+            return;
+        }
+
+        if (ingredientSprite == null)
+        {
+            Debug.LogError("Ingredient sprite is NULL on " + gameObject.name);
+            return;
+        }
+        
         if (counter < maxCounter)
         {
             // Hide or destroy collected object
