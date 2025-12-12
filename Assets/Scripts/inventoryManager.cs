@@ -47,7 +47,7 @@ public class InventoryManager : MonoBehaviour
 
     void SpawnSnack(GameObject prefab)
     {
-        Vector3 spawnPos = arCamera.position + arCamera.forward * 0.5f; // 0.5m in front
+        Vector3 spawnPos = arCamera.position + arCamera.forward * 0.5f - new Vector3(0, 0.1f, 0);; // 0.5m in front of camera, slightly down
         Instantiate(prefab, spawnPos, Quaternion.LookRotation(arCamera.forward));
     }
 
