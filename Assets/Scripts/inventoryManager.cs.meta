@@ -1,2 +1,26 @@
 fileFormatVersion: 2
 guid: d947845af05b79f43b9004a77e4f0b47
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ingredientCounterText: {instanceID: 0}
+  - snacksCraftedText: {instanceID: 0}
+  - flourSprite: {fileID: 21300000, guid: 67ed2c803093ef94cb009103a14df755, type: 3}
+  - sugarSprite: {fileID: 21300000, guid: a030238a69b355a4bb37d5b57db6d778, type: 3}
+  - eggSprite: {fileID: 21300000, guid: fd1bb6ec14a187b449646b9efe218eb4, type: 3}
+  - waterSprite: {fileID: 21300000, guid: 58ffb645876744f449b3994a8277f92e, type: 3}
+  - hawthornSprite: {fileID: 21300000, guid: c1cc4283a1c20a24d9e9355364faa3ef, type: 3}
+  - biscuitSprite: {fileID: 21300000, guid: 553032c1029753d468640d82118fa713, type: 3}
+  - bangkitSprite: {fileID: 21300000, guid: 48fa2ee6e4ecea94f890df143e3f3e9b, type: 3}
+  - hawFlakesSprite: {fileID: 21300000, guid: 8b479118a15131644b6659109cb42e43, type: 3}
+  - gameTimer: {instanceID: 0}
+  - arCamera: {instanceID: 0}
+  - biscuitPrefab: {fileID: 2465966669514881295, guid: adb7c7ba711d31e4a82b98ab08fed78e, type: 3}
+  - bangkitPrefab: {fileID: 1552391943786346539, guid: 9c5353f28474a76488fc1e4b37b0f6c7, type: 3}
+  - hawFlakesPrefab: {fileID: 1289718730133080360, guid: fa45556b0baee244a8e09152455ebcfe, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
