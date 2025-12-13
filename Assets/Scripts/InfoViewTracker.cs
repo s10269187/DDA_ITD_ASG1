@@ -53,7 +53,8 @@ public class InfoViewTracker : MonoBehaviour
     private void CheckIfPlayerIsDone() {
         Debug.Log($"CheckIfPlayerIsDone called. Biscuit={viewedBiscuit}, Bangkit={viewedBangkit}, Hawflakes={viewedHawflakes}");
 
-        if (viewedBiscuit && viewedBangkit && viewedHawflakes) {
+        if (viewedBiscuit && viewedBangkit)
+        {
             Debug.Log("ALL VIEWED, LOADING END SCREEN!");
             SceneManager.LoadScene("EndScreen");
         }
