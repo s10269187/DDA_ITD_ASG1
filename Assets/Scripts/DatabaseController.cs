@@ -1,8 +1,8 @@
 /// <summary>
 /// DatabaseController.cs
-/// This script handles the lava obstacle in the final stage of our haunted house
-/// When player steps onto the lava, the player automatically dies and respawn
-/// at the spawn point set in Unity as an empty GameObject
+/// This script handles the databased stored
+/// When player logins, a data of their email and password
+/// is stored as well as the time they took to complete game
 /// </summary>
 /// <author> Lee Jia Lu </author>
 /// <date> 09/12/2025 </date>
@@ -45,7 +45,7 @@ public class DatabaseController : MonoBehaviour
         {
             if (task.IsFaulted || task.IsCanceled)
             {
-                Debug.Log("Can't sign in due to error!!!");
+                Debug.Log("Can't sign in due to error");
             }
 
             if (task.IsCompleted)
@@ -68,7 +68,7 @@ public class DatabaseController : MonoBehaviour
         {
             if (task.IsFaulted || task.IsCanceled)
             {
-                Debug.Log("Can't sign in due to error!!!");
+                Debug.Log("Can't sign in due to error");
             }
 
             if (task.IsCompleted)
@@ -79,7 +79,7 @@ public class DatabaseController : MonoBehaviour
             }
         });
 
-        Debug.Log("Hahahahaha");
+        Debug.Log("Task completed");
     }
     /// <summary>
     /// Handles Firebase authentication state changes
@@ -92,11 +92,11 @@ public class DatabaseController : MonoBehaviour
 
         if (FirebaseAuth.DefaultInstance.CurrentUser == null)
         {
-            Debug.Log("User is not logged in!");
+            Debug.Log("Player is not logged in!");
         }
         else
         {
-            Debug.Log($"User logged in: {FirebaseAuth.DefaultInstance.CurrentUser.UserId}");
+            Debug.Log($"Player logged in: {FirebaseAuth.DefaultInstance.CurrentUser.UserId}");
         }
     }
 
@@ -154,40 +154,10 @@ public class DatabaseController : MonoBehaviour
             }
         });
 
-        Debug.Log("Hehehehehehh");
+        Debug.Log("Successfully made player");
 
 
-        /***
-         * BEFORE CRUD
-         *
-        Player justin = new Player("detach8", "Justin");
-        justin.items.Add(new Item("sword", 2));
-
-        Player steve = new Player("steviewonder", "Steve from Minecraft");
-        steve.items.Add(new Item("pickaxe", 1));
-
-        Player alex = new Player("alexinwonderland", "Alex from Minecraft");
-        alex.items.Add(new Item("shovel", 1));
-
-        string justinJson = JsonUtility.ToJson(justin, true);
-        string steveJson = JsonUtility.ToJson(steve);
-
-        Debug.Log(justinJson);
-        Debug.Log(steveJson);
-
-        db.Child("players").Child(justin.playerId).SetRawJsonValueAsync(justinJson);
-        db.Child("players").Child(steve.playerId).SetRawJsonValueAsync(steveJson);
-
-
-        var newReference = db.Child("players").Push();
-
-        Debug.Log($"The key is: {newReference.Key}");
-
-        alex.playerId = newReference.Key; // Store the new key
-        string alexJson = JsonUtility.ToJson(alex);
-
-        newReference.SetRawJsonValueAsync(alexJson);
-        */
+    
     }
 
     // Update is called once per frame
