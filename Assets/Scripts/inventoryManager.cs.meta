@@ -6,7 +6,7 @@ MonoImporter:
   defaultReferences:
   - ingredientCounterText: {instanceID: 0}
   - snacksCraftedText: {instanceID: 0}
-  - flourSprite: {instanceID: 0}
+  - flourSprite: {fileID: 21300000, guid: 67ed2c803093ef94cb009103a14df755, type: 3}
   - sugarSprite: {fileID: 21300000, guid: a030238a69b355a4bb37d5b57db6d778, type: 3}
   - eggSprite: {fileID: 21300000, guid: fd1bb6ec14a187b449646b9efe218eb4, type: 3}
   - waterSprite: {fileID: 21300000, guid: 58ffb645876744f449b3994a8277f92e, type: 3}
