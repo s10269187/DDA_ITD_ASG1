@@ -59,7 +59,7 @@ public class DatabaseController : MonoBehaviour
 
     /// <summary>
     /// Signs in an existing user using email and password
-    ///     /// Logs an error if login fails
+     /// Logs an error if login fails
     /// </summary>
     public void SignIn()
     {
@@ -159,7 +159,7 @@ public class DatabaseController : MonoBehaviour
 
     
     }
-
+    
     // Update is called once per frame
     void Update()
     {

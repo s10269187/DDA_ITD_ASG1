@@ -291,5 +291,18 @@ public class InventoryManager : MonoBehaviour
             });
         }
     }
+
+        public void DeletePlayer()
+    {
+        var db = FirebaseDatabase.DefaultInstance.RootReference;
+         var player = new Player();
+            player.id = "S1026";
+
+        db.Child("players").Child(player.id).RemoveValueAsync().ContinueWith(task =>
+        {
+            if (task.IsCompleted)
+                Debug.Log("Player deleted successfully!");
+        });
+    }
 }
 
