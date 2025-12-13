@@ -77,7 +77,7 @@
 - Delete account button
 - Play again button
 - Inventory
-- Shortcut guide
+- Shortcut guide to the menu
 - Player ID (Email)
 - Player name
   
@@ -85,7 +85,8 @@
 - The application is catering for a time based game that also teaches players fun facts about their childhood snacks
 - The application also applies to players that enjoy a fast paced game where speed matters
 - The application also applies to kids who love the childhood snacks and wish to become their own chef and make these snacks
-- The applicartion also caters to achievers who wish to find more facts and origin of specific snacks
+- The application also caters to achievers who wish to find more facts and origin of specific snacks
+- The application is catering for people who like a calming and easy game that is relaxing
 
 # Documented Wireframes/game flow
 - User logs and signs up with their username and password
@@ -94,6 +95,7 @@
 - Upon collecting, will go to the oven and craft the respective snacks
 - Once a snack is crafted, there will be a popup of the snack followed by the infographic, allowing players to learn more information
 - Once all 3 snacks has been crafted, timer will stop and players can end game from there
+  
 # External assets/libraries used
 
 # Original artwork/assets done
