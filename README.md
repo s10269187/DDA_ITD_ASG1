@@ -19,7 +19,7 @@
 # Game Objective
 - Collect 5 different ingredients (flour, egg, water, hawthorn, sugar)
 - Total number of ingredients = 8 (duplicates included)
-- Use collected ingredients to craft 3 snacks (Biscuit Gem, Haw Flakes, Bangkit)
+- Player collected ingredients to craft 3 snacks (Biscuit Gem, Haw Flakes, Bangkit)
 - Click "Find out more" button to learn more about the corresponding snacks
 - Complete the game in the least amount of time taken
 
@@ -96,11 +96,11 @@
 - Player name (firebase)
   
 # What is the application catering for
-- a time based game that teaches players fun facts about their childhood snacks
-- players that enjoy a fast paced game where speed matters
-- kids who love the childhood snacks and wish to become their own chef and make these snacks
-- achievers who wish to find more facts and origin of specific snacks
-- people who like a calming and easy game that is relaxing
+- A time based game that teaches players fun facts about their childhood snacks
+- Players that enjoy a fast paced game where speed matters
+- Kids who love the childhood snacks and wish to become their own chef and make these snacks
+- Achievers who wish to find more facts and origin of specific snacks
+- People who like a calming and easy game that is relaxing
 
 # Documented Wireframes/game flow
 - User logs and signs up with their username and password (start screen)
@@ -112,6 +112,11 @@
 - Return to start screen 
   
 # External assets/libraries used
+Firebase Authentication: (stores email, date of creation, user UID)
+Used for Email + Password Sign Up
+Firebase Realtime Database:
+Used to store and retrieve player data:
+ID, Name, Time 
 
 # Original artwork/assets done
 - All 3 snacks infographic
