@@ -2,6 +2,20 @@
 
 # ITD Section:
 
+# Walkthrough step by step on how to complete the game
+- Player Logs and Sign Up into the game
+- Collect all 8 ingredients (x3 sugar, x2 flour, 1 egg, 1 water, 1 hawthorn,)
+- Go to oven and craft the 3 snacks ((Biscuit Gem, Haw Flakes, Bangkit)
+- After snack spawned infront of player, click "Find Out More" Button
+- Infographic for the snack will pop up
+- Read the infographic, click close button when done
+- To complete the game, the player must close the Biscuit Gem and Bangkit infographics one after another
+- (since haw flake causing some issues in the code, it was removed from the condition to load end screen)
+- (e.g. The closing order can be Haw Flakes, Bangkit, Biscuit Gem OR ___, Haw Flakes, ___)
+- Haw Flakes should not be the final infographic closed, because the end screen will trigger early once Bangkit and Biscuit Gem are both closed
+- After the required infographics are closed, the End Screen will appear.
+- Click Play Again to return back to starting page 
+
 # Game Objective
 - Collect 5 different ingredients (flour, egg, water, hawthorn, sugar)
 - Total number of ingredients = 8 (duplicates included)
