@@ -16,7 +16,7 @@
 - Move Right side = D + Mouse Right Click
 - Move Up = Q + Mouse Right Click
 - Move Down = E + Mouse Right Click
-- Collect and Craft = Mouse Left Click
+- Collect, Craft and Pause = Mouse Left Click
 - Open Recipe Book: Left Click UI button (yellow book) 
 - Open Inventory: Left Click UI button (beige paper bag) 
 
@@ -31,7 +31,7 @@
 - Snacks infographic might also overlap each other
 - Player cannot manually choose where ingredients spawn
 - SFX for the buttons will still be heard even after player has collected/crafted everything
-- When paused, player can still look around but unable to move. They can collect ingredients still but it would not respawn until they resume
+- When paused, player can still look around but unable to move. They can still collect ingredients but it would not respawn until they resume
 - Each ingredient has a set timer for it till it respawns, no randomiser for it
 
 # Minimum Hardware Requirements
@@ -49,15 +49,15 @@
 
 # References & Credits
    Models + Textures
-   1)Hawthorn: https://sketchfab.com/3d-models/220912shanzha-crataegus-pinnatifida-6in1-b1c45a782942431b96d6ea5e594e1796
-   2)Water: https://sketchfab.com/3d-models/kirkland-water-bottle-46b407fa20ce49ae8763a9df8a9158df
-   3)Sugar: https://skfb.ly/oQXUp
-   4)Egg: https://skfb.ly/oSsDn
-   5)Flour bag: https://skfb.ly/oVtTT
-   6)Bangkit: https://sketchfab.com/3d-models/kuih-bangkit-f77c8d5313e44562bb561a1304b1a0e1
-   7)Haw flakes: https://sketchfab.com/3d-models/haw-flakes-ganjagao-low-poly-5f3ac3e5c5f74a3680639ecf086a5c15
-   8)Biscuit: https://sketchfab.com/3d-models/biscuit-b87822d4962a4300b4c96f0ca0836566
-   9)Cream: https://sketchfab.com/3d-models/cream-921e5f26a12643d99cded65621985a24
+   - Hawthorn: https://sketchfab.com/3d-models/220912shanzha-crataegus-pinnatifida-6in1-b1c45a782942431b96d6ea5e594e1796
+   - Water: https://sketchfab.com/3d-models/kirkland-water-bottle-46b407fa20ce49ae8763a9df8a9158df
+   - Sugar: https://skfb.ly/oQXUp
+   - Egg: https://skfb.ly/oSsDn
+   - Flour bag: https://skfb.ly/oVtTT
+   - Bangkit: https://sketchfab.com/3d-models/kuih-bangkit-f77c8d5313e44562bb561a1304b1a0e1
+   - Haw flakes: https://sketchfab.com/3d-models/haw-flakes-ganjagao-low-poly-5f3ac3e5c5f74a3680639ecf086a5c15
+   - Biscuit: https://sketchfab.com/3d-models/biscuit-b87822d4962a4300b4c96f0ca0836566
+   - Cream: https://sketchfab.com/3d-models/cream-921e5f26a12643d99cded65621985a24
 
 
 # DDA Section:
@@ -68,7 +68,7 @@
 
 
 # Displayed Content
-- Time taken to finish crafting all 3 snacks
+- Time taken to finish crafting all 3 snacks (firebase)
 - Counter for ingredients collected
 - Counter for snacks crafted
 - Pause button
@@ -77,24 +77,25 @@
 - Delete account button
 - Play again button
 - Inventory
-- Shortcut guide to the menu
-- Player ID (Email)
-- Player name
+- Shortcut guide to the menu 
+- Player ID (Email) (firebase)
+- Player name (firebase)
   
 # What is the application catering for
-- The application is catering for a time based game that also teaches players fun facts about their childhood snacks
-- The application also applies to players that enjoy a fast paced game where speed matters
-- The application also applies to kids who love the childhood snacks and wish to become their own chef and make these snacks
-- The application also caters to achievers who wish to find more facts and origin of specific snacks
-- The application is catering for people who like a calming and easy game that is relaxing
+- a time based game that teaches players fun facts about their childhood snacks
+- players that enjoy a fast paced game where speed matters
+- kids who love the childhood snacks and wish to become their own chef and make these snacks
+- achievers who wish to find more facts and origin of specific snacks
+- people who like a calming and easy game that is relaxing
 
 # Documented Wireframes/game flow
-- User logs and signs up with their username and password
+- User logs and signs up with their username and password (start screen)
 - Goes into the game
 - Collects all 8 ingredients in the fastest time possible
 - Upon collecting, will go to the oven and craft the respective snacks
 - Once a snack is crafted, there will be a popup of the snack followed by the infographic, allowing players to learn more information
 - Once all 3 snacks has been crafted, timer will stop and players can end game from there
+- Return to start screen 
   
 # External assets/libraries used
 
@@ -103,9 +104,10 @@
 - Oven Image Tracker
 - Recipe guide
 - Start page
-- Promotional post 
+- Promotional post
+- Promotional Trailer 
 
-# Social Media Page as promotional materials
+# Social Media Page for promotional materials
 - https://www.instagram.com/sgheritagebites?igsh=MmhjcGlzaHptMWpq
 
 
