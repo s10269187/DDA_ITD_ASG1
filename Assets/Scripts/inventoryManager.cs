@@ -301,6 +301,7 @@ public class InventoryManager : MonoBehaviour
     /// 
     private void CheckAllCrafted()
     {
+        Debug.Log("CheckAllCrafted() called");
         bool hasBiscuit = false;
         bool hasBangkit = false;
         bool hasHawFlakes = false;
@@ -317,10 +318,15 @@ public class InventoryManager : MonoBehaviour
 
         if (hasBiscuit && hasBangkit && hasHawFlakes)   // all crafted
         {
-            if (gameTimer != null)  
-                gameTimer.StopTimer();
+            Debug.Log("All snacks detected");
 
-            Debug.Log(" All items crafted! Timer stopped.");
+            if (gameTimer == null)
+                Debug.LogError("gameTimer is NULL!");
+            else
+            {
+                Debug.Log("Stopping timer now");
+                gameTimer.StopTimer();
+            }
 
             float elapsedTime = gameTimer != null ? gameTimer.GetElapsedTime() : 0f;    
             var player = new Player();
