@@ -1,3 +1,11 @@
+/// <summary>
+/// ImageTracker.cs
+/// This script handles the image tracking functionality using AR Foundation
+/// When an image is detected, the corresponding 3D model is instantiated and displayed
+/// </summary>
+/// <author> Leong Ming Hui </author>
+/// <date> 16/11/2025 </date>
+/// <StudentID> S10267664J </StudentID>
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
@@ -12,13 +20,13 @@ public class ImageTracker : MonoBehaviour
     [SerializeField]
     private GameObject[] placeablePrefabs;
 
-    private Dictionary<string, GameObject> spawnedPrefabs = new Dictionary<string, GameObject>();
+    private Dictionary<string, GameObject> spawnedPrefabs = new Dictionary<string, GameObject>();   // Dictionary to hold instantiated prefabs
 
     private void Start()
     {
-        if (trackedImageManager != null)
+        if (trackedImageManager != null)    
         {
-            trackedImageManager.trackablesChanged.AddListener(OnImageChanged);
+            trackedImageManager.trackablesChanged.AddListener(OnImageChanged);  
             SetupPrefabs();
         }
     }
@@ -34,7 +42,7 @@ public class ImageTracker : MonoBehaviour
         }
     }
 
-    void OnImageChanged(ARTrackablesChangedEventArgs<ARTrackedImage> eventArgs)
+    void OnImageChanged(ARTrackablesChangedEventArgs<ARTrackedImage> eventArgs) // called when tracked images change
     {
         foreach (ARTrackedImage trackedImage in eventArgs.added)
         {
