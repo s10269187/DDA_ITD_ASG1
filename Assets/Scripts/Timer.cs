@@ -1,11 +1,11 @@
 /// <summary>
 /// Timer.cs
-/// This script handles the lava obstacle in the final stage of our haunted house
-/// When player steps onto the lava, the player automatically dies and respawn
-/// at the spawn point set in Unity as an empty GameObject
+/// This script handles the timer in the game
+/// When player pauses the game and when player resume
+/// It calculates how long player is in the game for
 /// </summary>
 /// <author> Lee Jia Lu </author>
-/// <date> 09/12+/2025 </date>
+/// <date> 09/12/2025 </date>
 /// <StudentID> S10269187E </StudentID>
 using UnityEngine;
 using TMPro;

@@ -1022,7 +1022,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 4ee8a458cb8c45a45a0f6f738847009c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.09
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2006,7 +2006,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 0}
-  finalTimeText: {fileID: 1378918914}
 --- !u!114 &1378918914
 MonoBehaviour:
   m_ObjectHideFlags: 0
