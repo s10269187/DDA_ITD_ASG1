@@ -1,3 +1,11 @@
+/// <summary>
+/// InventoryManager.cs
+/// This script handles the ingredient item collected by player
+/// The ingredient sprite will be shown in the UI inventory
+/// </summary>
+/// <author> Leong Ming Hui </author>
+/// <date> 8/12/2025 </date>
+/// <StudentID> S10267664J </StudentID>
 using UnityEngine;
 
 public class Ingredient : MonoBehaviour
