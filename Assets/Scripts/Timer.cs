@@ -17,7 +17,6 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timerText;
-    [SerializeField] TextMeshProUGUI finalTimeText;
     private float elapsedTime;
     private bool isPaused;
 
@@ -28,7 +27,6 @@ public class Timer : MonoBehaviour
         int minutes = Mathf.FloorToInt(elapsedTime / 60);
         int seconds = Mathf.FloorToInt(elapsedTime % 60);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-        finalTimeText.text = $"Time Taken: {minutes:00}:{seconds:00}";
     }
 
     public void PauseGame()
